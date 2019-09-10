@@ -1,0 +1,55 @@
+############################
+## Лабораторная работа 2. ##
+############################
+
+## Задание 1. ##
+
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+
+print (((x2-x1)**2+(y2-y1)**2)**0.5)
+
+## Задание 2. ##
+
+a = int(input())
+b = int(input())
+c = int(input())
+print (abs(c-a))
+print (abs(c-b))
+print ((abs(c-a))+(abs(c-b)))
+
+## Задание 3. ##
+
+a = int(input())
+b = int(input())
+c = int(input())
+print (abs(c-a)*abs(c-b))
+
+## Задание 4. ##
+
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+
+print ((abs(y2-y1)+abs(x2-x1))*2)
+print (abs(y2-y1)*abs(x2-x1))
+
+## Задание 5. ##
+
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+x3 = int(input())
+y3 = int(input())
+
+a = ((x2-x1)**2+(y2-y1)**2)**0.5
+b = ((x3-x1)**2+(y3-y1)**2)**0.5
+c = ((x3-x2)**2+(y3-y2)**2)**0.5
+p = (a+b+c)/2
+
+print (p*2)
+print ((p*(p-a)*(p-b)*(p-c))**0.5)
