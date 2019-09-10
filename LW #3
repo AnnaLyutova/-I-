@@ -1,0 +1,58 @@
+############################
+## Лабораторная работа 3. ##
+############################
+
+## Задание 1. ##
+
+a = int(input())
+b = int(input())
+a,b = b,a
+
+print (a, b)
+
+## Задание 2. ##
+
+a = int(input())
+b = int(input())
+c = int(input())
+a,b,c = c,a,b
+
+print (a,b,c)
+
+## Задание 3. ##
+
+a = int(input())
+b = int(input())
+c = int(input())
+a,b,c = b,c,a
+
+print (a,b,c)
+
+## Задание 4. ##
+
+x = int(input())
+print (3*(x**6)-6*(x**2)-7)
+
+## Задание 5. ##
+
+x = int(input())
+print (4*((x-3)**6) - 7*((x-3))**3 + 2)
+
+## Задание 6. ##
+
+a = int(input())
+a *= a
+a *= a
+a *= a
+
+print (a)
+
+## Задание 7. ##
+
+a = int(input()) #a^1
+b = a*a #a^2
+a *= b #a^3
+b *= a #a^5
+a = b*b*b #a^15
+
+print (a)
