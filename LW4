@@ -1,0 +1,50 @@
+############################
+## Лабораторная работа 4. ##
+############################
+
+## Задание 1.##
+
+a = int(input())
+print (round(a*3.14159265/180,4))
+
+## Задание 2.##
+
+a = float(input())
+print (round(a*180/3.14159265,4))
+
+## Задание 3.##
+
+x = int(input())
+a = int(input())
+y = int(input())
+
+print (a/x)
+print (a*y/x)
+
+## Задание 4.##
+
+v1 = int(input())
+v2 = int(input())
+s = int(input())
+t = int(input())
+
+print (t*v2+s+t*v1)
+
+## Задание 5.##
+
+a = int(input())
+b = int(input())
+
+print (-b/a)
+
+## Задание 6.##
+
+a1 = int(input())
+b1 = int(input())
+c1 = int(input())
+a2 = int(input())
+b2 = int(input())
+c2 = int(input())
+x=(c1*b2-b1*c2)/(b2*a1-b1*a2)
+print (x)
+print ((c2-a2*x)/b2) #y=
