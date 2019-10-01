@@ -1,0 +1,33 @@
+############################
+## Лабораторная работа 6. ##
+############################
+
+## Задание 1.##
+
+a = int(input())
+print (a-a//60*60)
+
+## Задание 2.##
+
+k = int(input())
+print (k % 7)
+
+## Задание 3.##
+
+k = int(input())
+n = int(input())
+print ((k+n-1) % 7)
+
+## Задание 4.##
+
+a = int(input())
+b = int(input())
+c = int(input())
+print (round((a//c*c)*(b//c*c)/(c**2)))
+print ((a*b)-(a//c*c)*(b//c*c))
+
+## Задание 5.##
+
+n = int(input())
+n = n - 1
+print (round(n//100+1))
