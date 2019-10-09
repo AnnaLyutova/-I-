@@ -1,0 +1,90 @@
+############################
+## Лабораторная работа 7. ##
+############################
+
+## Задание 1.##
+
+a = int(input())
+b = int(input())
+
+if a > 2 and b < 4:
+    print ("Да")
+else:
+    print ("Нет")
+    
+## Задание 2.##
+
+a = int(input())
+b = int(input())
+c = int(input())
+
+if a < b and b < c:
+    print ("Да")
+else:
+    print ("Нет")
+    
+## Задание 3.##       
+
+n = int(input())
+
+if n % 2 == 0 and n // 100 == 0:
+    print ("Да")
+else:
+    print ("Нет")
+   
+## Задание 4.##       
+
+n = int(input())
+n3 = (n % 10)
+n2 = ((n % 100 - n % 10)//10)
+n1 = ((n % 1000 - n % 100)//100)
+
+if (n3 > n2 > n1) or (n3 < n2 < n1):
+    print ("Да")
+else:
+    print ("Нет")
+
+## Задание 5.##       
+
+n = int(input())
+n4 = (n % 10)
+n3 = ((n % 100 - n % 10)//10)
+n2 = ((n % 1000 - n % 100)//100)
+n1 = ((n % 10000 - n % 1000)//1000)
+
+if n4 == n1 and n2 == n3:
+    print ("Да")
+else:
+    print ("Нет")
+
+## Задание 6.##       
+
+a = int(input())
+b = int(input())
+c = int(input())
+
+gip = max(a, b, c)
+
+if (gip == a and a == (b**2 + c**2)**0.5) or (gip == b and b == (a**2 + c**2)**0.5) or (gip == c and c == (a**2 + b**2)**0.5):
+    print ("Да")
+else:
+    print ("Нет")
+    
+## Задание 7.##       
+
+a = int(input())
+b = int(input())
+c = int(input())
+
+if (a + b > c) and (b + c > a) and (a + c > b):
+    print ("Да")
+else:
+    print ("Нет")
+
+ 
+
+
+
+
+
+    
