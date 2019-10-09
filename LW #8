@@ -1,0 +1,36 @@
+## Задание 1.##       
+
+a = int(input())
+b = int(input())
+
+if a == b:
+    a, b = 0, 0
+    print (a, b)
+else:
+    a, b = max(a,b), max(a,b)
+    print (a, b)
+    
+## Задание 2.##       
+
+a = int(input())
+b = int(input())
+c = int(input())
+
+print (max(a+b,b+c,a+c))
+
+## Задание 3.##       
+
+ax = int(input())
+ay = int(input())
+bx = int(input())
+by = int(input())
+cx = int(input())
+cy = int(input())
+AB = ((by - ay)**2 + (bx - ax)**2)**0.5
+AC = ((cy - ay)**2 + (cx - ax)**2)**0.5
+
+if  AB < AC:
+    print ("B", AB)
+else:
+    print ("C", AC)
+    
