@@ -1,0 +1,60 @@
+## Задание 1.##       
+
+n = int(input())
+s = 0
+
+for i in range (10):
+    s += 0.1
+    print(round(s*n,2)) 
+
+## Задание 2.## 
+
+n = int(input())
+s = 1.0
+p = 1
+
+for i in range (n):
+    s += 0.1
+    p *= s
+
+print(round(p,2))
+
+## Задание 3.## 
+
+n = int(input())
+t = 1
+s = 1
+
+for i in range (n-1):
+    t += 2
+    s += t
+    print(round(s,2))
+print("Итого " + str(n) +"^2 = " + str(round(s,2)))    
+
+## Задание 4.## 
+
+n = int(input())
+a = int(input())
+s = 0
+t = 0
+
+for i in range (n+1):
+    s += a**t
+    t += 1
+print(round(s,2))    
+
+## Задание 5.## 
+
+n = int(input())
+a = int(input())
+s = 1
+t = 1
+
+for i in range (n):
+    s += (a**t)*(1-t%2*2)
+    t += 1
+print(round(s,2))  
+
+
+
+
