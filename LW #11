@@ -1,0 +1,75 @@
+## Задание 1.## 
+
+a = int(input())
+b = int(input())
+
+for i in range (a, b + 1):
+    for j in range (i):
+        print(i)
+
+## Задание 2.## 
+
+a = int(input())
+b = int(input())
+n = b
+
+while n < a-b:
+    n += b
+
+print (a-n)
+
+## Задание 3 
+
+n = int(input())
+k = 0
+s = 0
+
+while s < n:
+    k += 1
+    s += k
+
+print (k-1)
+print (s-k)
+
+## Задание 4 
+
+p = int(input())
+k = 0
+s = 1000
+
+while s < 1100:
+    k += 1
+    s = s + p*s/100
+
+print (k)
+print (round(s, 2))
+
+## Задание 5 
+
+a = int(input())
+b = int(input())
+ 
+while a != 0 and b != 0:
+    if a > b:
+        a = a % b
+    else:
+        b = b % a
+ 
+print(a + b)
+
+## Задание 6
+
+n = int(input())
+a = 1
+b = 1
+s = 0
+k = 0
+ 
+while s != n:
+    s = a + b
+    a = b
+    b = s
+    k += 1
+    
+print(s)
+print(k+2)
