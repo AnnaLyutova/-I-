@@ -1,0 +1,74 @@
+## Задание 1
+
+def PowerA3(A, B):
+    B = A**3
+    return B
+    
+a = [0]*5
+
+for i in range(len(a)):
+    a[i] = int(input())
+
+for i in range(len(a)):
+    print(PowerA3(a[i], "B"))
+
+## Задание 2 
+
+def Sign(x):
+    if x <  0:
+        return -1
+    elif x == 0:
+        return 0
+    else:
+        return 1
+    
+a = int(input())
+b = int(input())
+
+print (Sign(a)+Sign(b))
+
+## Задание 3
+
+def RingS(r1, r2):
+    return ((r1**2 - r2**2)*3.14)
+    
+for i in range(3):
+    
+    a = int(input())
+    b = int(input())
+    print(round(RingS(a, b),2))
+    
+## Задание 4 
+
+def Quarter(x, y):
+    if x > 0 and y > 0:
+        return 1
+    if x > 0 and y < 0:
+        return 2
+    if x < 0 and y < 0:
+        return 3
+    else:
+        return 4
+    
+for i in range(3):
+    
+    a = int(input())
+    b = int(input())
+    print(Quarter(a, b))
+    
+ ## Задание 5 
+
+def Fact2(n):
+    t = n
+    while (n-2) > 1:
+        t = t*(n-2)
+        n -= 2
+    return(t)
+  
+for i in range(3):
+    a = int(input())
+    print(Fact2(a))
+
+
+
+
