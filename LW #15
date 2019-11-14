@@ -1,4 +1,4 @@
-## Задание 1
+################################# Задание 1 #################################
 
 n = int(input())
 a = [0]*n
@@ -19,3 +19,90 @@ for i in range(n):
 
 print(a, b)
     
+################################# Задание 2 #################################
+
+n = int(input())
+a = [0]*n
+b = [0]*n
+t = 0
+
+print("Введите массив А.")
+for i in range(n):
+    a[i] = int(input())
+
+for i in range(n):
+    t += a[i]
+    b[i] = t/(i+1)
+
+print(a, b)
+    
+################################# Задание 3 #################################
+
+n = int(input())
+a = [0]*n
+nechet = 0
+
+print("Введите массив А.")
+for i in range(n):
+    a[i] = int(input())
+
+for i in range(n):
+    if a[i] % 2 == 1:
+        nechet = a[i]
+        
+for i in range(n):
+    if a[i] % 2 == 1:
+        a[i] += nechet
+
+print(a)
+
+################################# Задание 4 #################################
+
+n = int(input())
+a = [0]*n
+maximum = -1
+minimum = 99999999999999999999
+k = 0
+l = 0
+
+print("Введите массив А.")
+for i in range(n):
+    a[i] = int(input())
+
+for i in range(n):
+    if max(maximum, a[i]) == a[i]:
+        maximum = a[i]
+        k = i
+    if min(minimum, a[i]) == a[i]:
+        minimum = a[i]
+        l = i
+
+if k > l:
+    k, l = l, k
+    
+for i in range(k+1, l):
+    a[i] = 0
+
+print(a)
+
+################################# Задание 5 #################################
+
+n = int(input())
+a = [0]*n
+t = 0
+
+print("Введите массив А.")
+for i in range(n):
+    a[i] = int(input())
+
+for i in range(n):
+    if max(a[0], a[i]) == a[0]:
+        t = i
+        temp = a[0]
+
+for i in range(t):
+    a[i] = a[i+1]
+    
+a[t] = temp
+
+print(a)  
