@@ -60,21 +60,18 @@ print(a)
 
 n = int(input())
 a = [0]*n
-maximum = -1
-minimum = 99999999999999999999
-k = 0
-l = 0
 
 print("Введите массив А.")
 for i in range(n):
     a[i] = int(input())
 
+k = max(a)
+l = min(a)
+
 for i in range(n):
-    if max(maximum, a[i]) == a[i]:
-        maximum = a[i]
+    if a[i] == k:
         k = i
-    if min(minimum, a[i]) == a[i]:
-        minimum = a[i]
+    if a[i] == l:
         l = i
 
 if k > l:
