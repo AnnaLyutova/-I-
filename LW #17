@@ -21,3 +21,69 @@ for i in range(n):
         lenght = 1
        
 print(b, c)
+
+################################# Задание 2 #################################
+
+print("Введите число L:")
+l = int(input())
+
+print("Введите длину массива:")
+n = int(input())
+
+a = [0]*n
+lenght = 1
+b = []
+c = []
+
+print("Введите массив А:")
+for i in range(n):
+    a[i] = int(input())
+
+a.append("что-то, чему точно не равен последний элемент")
+
+for i in range(n):
+    
+    if a[i] == a[i+1]:
+        lenght += 1
+    elif lenght > l:
+        b.append(1)
+        c.append(0)
+        lenght = 1
+    else:
+        b.append(lenght)
+        c.append(a[i])
+        lenght = 1
+       
+print(b, c)
+
+################################# Задание 3 #################################
+
+print("Введите число K:")
+k = int(input())
+
+print("Введите длину массива:")
+n = int(input())
+
+a = [0]*n
+lenght = 1
+b = []
+c = []
+
+print("Введите массив А.")
+for i in range(n):
+    a[i] = int(input())
+
+a.append("что-то, чему точно не равен последний элемент")
+
+for i in range(n):
+    if a[i] == a[i+1]:
+        lenght += 1
+    else:
+        b.append(lenght)
+        c.append(a[i])
+        lenght = 1
+        
+b[len(b)-1], b[k-1] = b[k-1], b[len(b)-1],
+c[len(c)-1], c[k-1] = c[k-1], c[len(c)-1],
+
+print(b, c)
