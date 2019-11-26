@@ -107,3 +107,38 @@ for i in range(n):
 
 print(x)
 
+################################# Задание 5 #################################
+
+def length(massive, a, b):
+    return (((massive[a][0] - massive[b][0])**2 + (massive[a][1] - massive[b][1])**2)**0.5)
+    
+def perimeter(massive, a, b, c):
+    return(length(massive, a, b) + length(massive, b, c) + length(massive, a, c))
+        
+    
+print("Введите количество точек (N):")
+n = int(input())
+
+print("Введите координаты точек (x/пробел/y)")
+a = [[int(j) for j in input().split()] for i in range(n)]
+
+maxPerimeter = -1
+ab = [0,0]
+bc = [0,0]
+ac = [0,0]
+
+for i in range(n):                      
+        for j in range(1, n):              
+            for k in range(2, n):             
+                tmpPerimeter = perimeter(a, i, j, k); 
+                if tmpPerimeter > maxPerimeter:     
+                    maxPerimeter = tmpPerimeter      
+                    ab = [a[i][0],a[i][1]]                               
+                    bc = [a[j][0],a[j][1]]                                   
+                    ac = [a[k][0],a[k][1]] 
+
+print ("Максимальный периметр = ", maxPerimeter)               
+print ("Точка AB = ", ab)
+print ("Точка BС = ", bc)
+print ("Точка AC = ", ac)
+
