@@ -1,0 +1,138 @@
+################################# Задание 1 #################################
+
+result = []    
+print("Введите размерность квадратной матрицы (М):")
+m = int(input())
+
+while m%2 == 0:
+    print("М должно быть нечётным числом.")
+    print("Введите размерность матрицы (М):")
+    m = int(input())
+
+print("Введите элементы матрицы:")
+a = [[int(input()) for j in range(m)] for i in range(m)]
+
+print("Вы ввели матрицу:")
+for i in range (m):
+    print(a[i])
+
+print("Выходные данные:") 
+for j in range (m//2):
+    for i in range (j, m-j-1):
+        result.append(a[i][j])
+    for i in range (j, m-j-1):
+        result.append(a[m-j-1][i])
+    for i in range (m-j-1, j, -1):
+        result.append(a[i][m-j-1])
+    for i in range (m-j-1, j, -1):
+        result.append(a[j][i])
+result.append(a[m//2][m//2])
+print (result)
+
+################################# Задание 2 #################################
+
+s = 0
+p = 1
+
+print("Введите число строк матрицы (М):")
+m = int(input())
+print("Введите число столбцов матрицы (N):")
+n = int(input())
+print("Введите номер строки (K):")
+k = int(input())
+
+print("А теперь введите элементы матрицы:")
+a = [[int(input()) for j in range(n)] for i in range(m)]
+
+print("Вы ввели матрицу:")
+for i in range (m):
+    print(a[i])
+      
+for i in range (n):
+    s += a[k-1][i]
+    p *= a[k-1][i]
+
+print("Выходной результат:", s, p)
+
+################################# Задание 3 #################################
+
+p = 1
+num = -1
+min_p  = 99999999999999
+
+print("Введите число строк матрицы (М):")
+m = int(input())
+print("Введите число столбцов матрицы (N):")
+n = int(input())
+
+print("А теперь введите элементы матрицы:")
+a = [[int(input()) for j in range(n)] for i in range(m)]
+
+print("Вы ввели матрицу:")
+for i in range (m):
+    print(a[i])
+       
+for i in range (n):
+    for j in range (m):
+        p *= a[j][i]
+    if p < min_p:
+        min_p = p
+        num = i
+    p = 1
+     
+print("Выходной результат:", min_p, num+1)
+
+################################# Задание 4 #################################
+
+s = 0
+
+print("Введите число строк матрицы (М):")
+m = int(input())
+print("Введите число столбцов матрицы (N):")
+n = int(input())
+k = [0] * n
+
+print("А теперь введите элементы матрицы:")
+a = [[int(input()) for j in range(n)] for i in range(m)]
+
+print("Вы ввели матрицу:")
+for i in range (m):
+    print(a[i])
+      
+for i in range (n):
+    for j in range (m):
+        s += a[j][i]
+    for l in range (m):
+        if a[l][i] > (s/m):
+            k[i] += 1
+    s = 0
+
+print("Выходной результат:", k)
+
+################################# Задание 5 #################################
+
+k = 0
+
+print("Введите число строк матрицы (М):")
+m = int(input())
+print("Введите число столбцов матрицы (N):")
+n = int(input())
+
+print("А теперь введите элементы матрицы:")
+a = [[int(input()) for j in range(n)] for i in range(m)]
+
+print("Вы ввели матрицу:")
+for i in range (m):
+    print(a[i])
+       
+for i in range (n):
+    for j in range (m):
+        if a[j][i]%2 == 1:
+            k += 1
+    if k==m:
+        print("Столбец №:", i+1)
+        break
+    k = 0
+
+if k == 0:
+    print("Элементы всех столбцов чётные.")
