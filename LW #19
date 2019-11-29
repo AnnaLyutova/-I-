@@ -24,3 +24,32 @@ for i in range (m):
 print("Преобразованная матрица:")
 for i in range (m):
     print(a[i])
+    
+################################# Задание 2 #################################
+
+print("Введите число строк матрицы (М):")
+m = int(input())
+print("Введите число столбцов матрицы (N):")
+n = int(input())
+
+print("А теперь введите элементы матрицы:")
+a = [[int(input()) for j in range(n)] for i in range(m)]
+
+print("Вы ввели матрицу:")
+for i in range (m):
+    print(a[i])
+
+for i in range (m):
+    for j in range (n):
+        if a[i][j] == (max(max(a))):
+            t_max = j
+        if a[i][j] == (min(min(a))):
+            t_min = j
+
+print(t_min, t_max)
+print("Преобразованная матрица:")
+for i in range (m):
+    for j in range (n):
+        if j == t_max:
+            a[i][j], a[i][t_min] = a[i][t_min], a[i][j]
+    print(a[i])
