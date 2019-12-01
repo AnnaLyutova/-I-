@@ -115,3 +115,34 @@ while grow(m, a) != True:
 print("Преобразованная матрица:")
 for i in range (m):
     print(a[i])
+
+################################# Задание 5 #################################
+
+s = []
+t = 0
+
+print("Введите размерность квадратной матрицы (М):")
+m = int(input())
+
+print("А теперь введите элементы матрицы:")
+a = [[int(input()) for j in range(m)] for i in range(m)]
+
+print("Вы ввели матрицу:")
+for i in range (m):
+    print(a[i])
+
+for i in range(m-1):
+    for j in range(i+1):
+        t += a[i-j][m-j-1]
+    s.append(t)
+    t = 0
+
+t = 0
+for i in range(m-1, 0, -1):
+    for j in range(i):
+        t += a[m-1-j][i-j-1]
+    s.append(t)
+    t = 0
+
+print("Выходные данные:", s)
+        
