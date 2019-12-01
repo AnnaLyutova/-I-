@@ -46,10 +46,72 @@ for i in range (m):
         if a[i][j] == (min(min(a))):
             t_min = j
 
-print(t_min, t_max)
 print("Преобразованная матрица:")
 for i in range (m):
     for j in range (n):
         if j == t_max:
             a[i][j], a[i][t_min] = a[i][t_min], a[i][j]
+    print(a[i])
+
+################################# Задание 3 #################################
+
+print("Введите число строк матрицы (М):")
+m = int(input())
+
+while m%2 != 0:
+    print("Число М должно быть четными! Введите число строк матрицы (М):")
+    m = int(input())
+    
+print("Введите число столбцов матрицы (N):")
+n = int(input())
+
+while n%2 != 0:
+    print("Число N должно быть четными! Введите число столбцов матрицы (N):")
+    n = int(input())
+
+print("А теперь введите элементы матрицы:")
+a = [[int(input()) for j in range(n)] for i in range(m)]
+
+print("Вы ввели матрицу:")
+for i in range (m):
+    print(a[i])
+
+for i in range (m//2):
+    for j in range (n//2):
+        a[i][j], a[m//2+i][n//2+j] = a[m//2+i][n//2+j], a[i][j]
+
+print("Преобразованная матрица:")
+for i in range (m):
+    print(a[i])
+
+################################# Задание 4 #################################
+
+def grow(lenght, mass):
+    for i in range(lenght-1):
+        if mass[i+1][0] < mass[i][0]:
+            return None
+    return True
+            
+print("Введите число строк матрицы (М):")
+m = int(input())
+print("Введите число столбцов матрицы (N):")
+n = int(input())
+
+
+print("А теперь введите элементы матрицы:")
+a = [[int(input()) for j in range(n)] for i in range(m)]
+
+print("Вы ввели матрицу:")
+for i in range (m):
+    print(a[i])
+
+print(grow(m, a))
+
+while grow(m, a) != True:
+    for i in range(m-1):
+        if a[i][0] > a[i+1][0]:
+            a[i], a[i+1] = a[i+1], a[i]
+
+print("Преобразованная матрица:")
+for i in range (m):
     print(a[i])
