@@ -52,7 +52,7 @@ for i in range (len(s)):
     if s0 in s[i:i+len(s0)]:
         t += 1
         
-print(t)
+print("Выходные данные:", t)
 
 
 
