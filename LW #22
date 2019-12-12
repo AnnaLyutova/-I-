@@ -1,0 +1,72 @@
+################################# Задание 1 #################################
+
+f = open("file1.txt", "r")
+s = f.readline()
+first_ = s.find(" ") + 1
+f = open("file1.txt", "w")
+f.write(s[first_:])
+f.close()
+
+################################# Задание 2 #################################
+
+print("Введите имя файла, который хотите создать:")
+name = input()
+print("Введите числа K и N:")
+k = int(input())
+n = int(input())
+
+f = open(name + ".txt", "w")
+
+for i in range (k):
+    for j in range (n):
+        f.write("*")
+    f.write("\n")
+
+f.close()
+
+################################# Задание 3 #################################
+
+f1 = open("file3_1.txt", "r")
+f2 = open("file3_2.txt", "r")
+
+s2 = f2.read() + f1.read()
+
+f1 = open("file3_1.txt", "w")
+f1.write(s2)
+
+f1.close()
+f2.close()
+
+################################# Задание 4 #################################
+
+f = open("file4.txt", "r")
+
+s0 = f.read()
+
+s = ""
+for i in range (len(s0)):
+    if s0[i-1] == " " and s0[i] == " ":
+        pass
+    else:
+        s += s0[i]
+
+f = open("file4.txt", "w")
+f.write(s)
+
+f.close()
+
+################################# Задание 5 #################################
+
+f = open("file5.txt", "r")
+
+s = f.read()
+t = s.count("     ")
+
+
+f = open("file5.txt", "a")
+f.write("\nКоличество абзацев в тексте: ")
+f.write(str(t))
+
+print("Количество абзацев в тексте: ", t)
+
+f.close()
