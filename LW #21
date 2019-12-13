@@ -17,11 +17,11 @@ s = s0 + "平"
 t = 0
 min_len = 999999999999999
 for i in range (len(s)):
-    if s[i]==" " or s[i] == "平":
+    if s[i] != " " and s[i] != "平":
+        t += 1
+    elif t != 0:
         min_len = min(min_len, t)
         t = 0
-    else:
-        t += 1
         
 print("Длина самого короткого слова равна:", min_len)
 
